@@ -1,5 +1,5 @@
 import torch
-
+import matplotlib.pyplot as plt
 import torch.nn as nn
 import torch.optim as optim
 import torchvision
@@ -9,7 +9,8 @@ import torchvision.transforms as transforms
 from torch.utils.tensorboard import SummaryWriter
 
 
-class Discriminator(nn.Module)
+
+class Discriminator(nn.Module):
     def __init__(self,img):
         super(Discriminator,self).__init__()
         self.disc=nn.Sequential(
@@ -23,7 +24,7 @@ class Discriminator(nn.Module)
         return self.disc(x)
 
 
-class Generator(nn.Module)
+class Generator(nn.Module):
     def __init__(self,z_dim,img):
         super(Generator,self).__init__()
         self.gen=nn.Sequential(
